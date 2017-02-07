@@ -1,0 +1,93 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createPatchDict;
+}
+
+pointSync false;
+
+patches
+(
+    // TOP symmetry place
+    {
+        // Name of new patch
+        name TOP;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom patches;
+        patches ( b3-top b18-top b26-top b34-top b41-top b48-top b53-top  );
+    }
+    // Bottom symmetry plane
+    {
+        // Name of new patch
+        name BOTTOM;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom patches;
+        patches ( b2-bottom b17-bottom  b25-bottom  b33-bottom b40-bottom b47-bottom b52-bottom );
+    }
+    // INLET
+    {
+        // Name of new patch
+        name INLET;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom patches;
+        patches ( b49-inlet );
+    }
+    // OUTLET
+    {
+        // Name of new patch
+        name OUTLET;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom patches;
+        patches ( b54-outlet );
+ 
+    }
+    // TOP PERIODIC
+    {
+        // Name of new patch
+        name cyclic_top;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom patches;
+        patches ( b39-cyclic b50-cyclic b55-cyclic);
+      
+    }
+    // Bottom periodic
+    {
+        // Name of new patch
+        name cyclic_bottom;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom patches;
+        patches ( b46-cyclic b51-cyclic b56-cyclic );
+    }
+    // Turbine wall
+    {
+        // Name of new patch
+        name BLADE;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom patches;
+        patches ( b6-wall );
+    }
+);
+

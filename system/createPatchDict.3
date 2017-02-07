@@ -1,0 +1,28 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createPatchDict;
+}
+
+pointSync false;
+
+patches
+(
+    // Internal faces to remove
+    {
+        // Name of new patch
+        name INTERNAL;
+        patchInfo
+        {
+            type patch;
+        }
+        constructFrom patches;
+        patches ( b4-to-stitch-a b5-to-stitch-b b7-to-stitch-a b8-to-stitch-b b9-to-stitch-a b10-to-stitch-b b11-to-stitch-a b12-to-stitch-b
+                  b13-to-stitch-a b14-to-stitch-b b15-to-stitch-a b16-to-stitch-b b19-to-stitch-a b20-to-stitch-b b21-to-stitch-a b22-to-stitch-b
+                  b23-to-stitch-a b24-to-stitch-b b27-to-stitch-a b28-to-stitch-b b29-to-stitch-a b30-to-stitch-b b31-to-stitch-a b32-to-stitch-b
+                  b35-to-stitch-a b36-to-stitch-b b37-to-stitch-a b38-to-stitch-b b42-to-stitch-a b43-to-stitch-b b44-to-stitch-a b45-to-stitch-b );
+    }
+);
+

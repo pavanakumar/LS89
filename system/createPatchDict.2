@@ -1,0 +1,38 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createPatchDict;
+}
+
+pointSync false;
+
+patches
+(
+  {
+     name cyclic_half_0;
+     patchInfo
+     {
+       type cyclic;
+       neighbourPatch cyclic_half_1;
+       transform translational;
+       separationVector (0 -0.0574999507489485 0);
+     }
+     constructFrom patches;
+     patches (cyclic_bottom);
+  }
+  {
+     name cyclic_half_1;
+     patchInfo
+     {
+       type cyclic;
+       neighbourPatch cyclic_half_0;
+       transform translational;
+       separationVector (0 0.0574999507489485 0);
+     }
+     constructFrom patches;
+     patches (cyclic_top);
+  }
+);
+
