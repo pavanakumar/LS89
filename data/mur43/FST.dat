@@ -1,0 +1,7 @@
+T^{inlet}_0     = 420 K
+P^{inlet}_0     = 1.435e6 Pa
+M^{isen}_{exit} = 0.84
+Re_{outlet}     = 1.0e6
+P_{exit}        = 0.62999976 * 1.435e6 Pa
+                = 9.040496556e5 Pa
+
