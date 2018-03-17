@@ -6,8 +6,6 @@ Experimental data
 -----------------
 
 data/mur43-49
- |
-  -------> FST.dat - Free-stream conditons
- |
-  -------> pressureDistribution.dat - Surface pressure/Isentropic Mach number distribution
+ - **FST.dat** : Free-stream conditons
+ - **pressureDistribution.dat** : Surface pressure/Isentropic Mach number distribution
  
